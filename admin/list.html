@@ -89,7 +89,7 @@ Licensed via MPL-2.0 license -->
         // delete
         function deleteLink(path, to) {
             // 确认框
-            if (confirm(path+" => "+to +"\nConfirm to delete?") == true) {
+            if (confirm(path+" => "+to +"\n确认要删除吗？") == true) {
 
                 var settings = {
                     "url": customUrl+"/admin/api/delete?path=" + path,
@@ -119,7 +119,7 @@ Licensed via MPL-2.0 license -->
                         init_list()
                     } else {
                         console.error(response)
-                        alert('Failed to delete,\nPlease go to your browser console to view details.')
+                        alert('删除失败,\n请转到浏览器控制台查看详细信息。')
                     }
                 });
                 }
@@ -128,7 +128,7 @@ Licensed via MPL-2.0 license -->
         function pageCtr(Ctr) {
             if (Ctr == "Up") {
                 if (list_this_page == 0) {
-                    alert('Already the first page')
+                    alert('已经是第一页了。')
                     init_list()
                     return
                 } else {
@@ -141,14 +141,14 @@ Licensed via MPL-2.0 license -->
             } else if (Ctr == "Jump") {
                 var Jump_num = document.getElementById('Jump_num_input').value
                 if (Jump_num == "") {
-                    alert('Please enter the number of pages to jump to')
+                    alert('请输入要跳转到的页数...')
                     return
                 } else {
                     if (Jump_num > 0 && Jump_num <= pageCount) {
                         list_this_page = Jump_num - 1
                         init_list()
                     } else {
-                        alert('Please enter the correct number of pages')
+                        alert('请输入正确的页数')
                         return
                     }
                 }
@@ -248,7 +248,7 @@ Licensed via MPL-2.0 license -->
         async function edit(path) {
 
             // 要求输入新的path
-            var newPath = prompt("Edit: "+path+", please type in new url");
+            var newPath = prompt("编辑: "+path+", 请输入新的跳转链接");
             
             if (newPath == null) {
                 return;
