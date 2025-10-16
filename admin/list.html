@@ -6,19 +6,19 @@ Licensed via MPL-2.0 license -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Magic Link | List</title>
+    <title>简易短链接列表</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
 </head>
 
 <body>
     <nav class="navbar navbar-light navbar-expand-md fixed-top navbar-shrink py-3" id="mainNav" style="backdrop-filter: blur(10px);">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href=""><span><b>Magic Link</b></span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href=""><span><b>简易短链接</b></span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">切换导航</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="create.html">Create</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="list.html">List</a></li>
-                </ul><a class="btn btn-primary shadow" role="button" href="javascript:logout()">Secure logout</a>
+                    <li class="nav-item"><a class="nav-link" href="create.html">创建</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="list.html">列表</a></li>
+                </ul><a class="btn btn-primary shadow" role="button" href="javascript:logout()">安全退出</a>
             </div>
         </div>
     </nav>
@@ -26,23 +26,23 @@ Licensed via MPL-2.0 license -->
         <div class="container py-4 py-xl-5">
 
             <div class="text-center mt-5" style="margin-bottom: 0.2rem;">
-                <h1 class="display-6 fw-bold mb-4">List</h1>
-                <p class="mb-4" style="font-size: 1.6rem;padding-top: 0px;margin-top: -15px;">List of links</p>
+                <h1 class="display-6 fw-bold mb-4">列表</h1>
+                <p class="mb-4" style="font-size: 1.6rem;padding-top: 0px;margin-top: -15px;">链接列表</p>
                 <form>
-                    <div class="input-group"><span class="input-group-text">Filter</span><input class="form-control" type="text" placeholder='{"key":"value"}' id="search_keywords"><a class="btn btn-primary" role="button" href="javascript:pageCtr('Search')">Filter</a></div>
+                    <div class="input-group"><span class="input-group-text">过滤</span><input class="form-control" type="text" placeholder='{"key":"value"}' id="search_keywords"><a class="btn btn-primary" role="button" href="javascript:pageCtr('Search')">过滤</a></div>
                 </form>
             </div>
-            <p style="opacity: 0.75; font-size: 14px;" align="right">Supports basic <a href="https://www.mongodb.com/docs/manual/tutorial/query-documents/" target="_blank">Mongodb query syntax</a>, Please convert the query key to lowercase.</p>
+            <p style="opacity: 0.75; font-size: 14px;" align="right">基本支持<a href="https://www.mongodb.com/docs/manual/tutorial/query-documents/" target="_blank">Mongodb查询语法</a>, 请将查询键转换为小写。</p>
             
             <div class="text-center" style="margin-top: 45px;">
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Path</th>
-                                <th>To</th>
-                                <th>Creator</th>
-                                <th>Actions</th>
+                                <th>路径</th>
+                                <th>指向</th>
+                                <th>创建者</th>
+                                <th>操作</th>
                             </tr>
                         </thead>
                         <tbody id="tbodyIm">
@@ -50,12 +50,12 @@ Licensed via MPL-2.0 license -->
                     </table>
                 </div>
                 <div class="btn-group" role="group"></div>
-                <div class="input-group"><a class="btn btn-primary" role="button" href="javascript:pageCtr('Up')">Up</a><span class="input-group-text"><span id="this_page_num"></span>/<span id="total_page_num"></span></span><a class="btn btn-primary" role="button" href="javascript:pageCtr('Down')">Down</a><input class="form-control" type="text" id="Jump_num_input"><a class="btn btn-primary" role="button" href="javascript:pageCtr('Jump')">Jump</a></div>
+                <div class="input-group"><a class="btn btn-primary" role="button" href="javascript:pageCtr('Up')">上一页</a><span class="input-group-text"><span id="this_page_num"></span>/<span id="total_page_num"></span></span><a class="btn btn-primary" role="button" href="javascript:pageCtr('Down')">下一页</a><input class="form-control" type="text" id="Jump_num_input"><a class="btn btn-primary" role="button" href="javascript:pageCtr('Jump')">跳转</a></div>
             </div>
         </div>
     </section>
     <footer>
-        <p style="padding-top: 2rem; opacity: 0.65;" align="center"><a href="https://go.muna.uk/qhssv" target="_blank">Magic Link</a> by <a href="https://go.muna.uk/UCYcO" target="_blank">Lilac Milena</a>.<br>Licensed via MPL-2.0 license</p>
+        <p style="padding-top: 2rem; opacity: 0.65;" align="center"><a href="https://go.muna.uk/qhssv" target="_blank">简易短链接</a> by <a href="https://go.muna.uk/UCYcO" target="_blank">Lilac Milena</a>.<br>Licensed via MPL-2.0 license</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
